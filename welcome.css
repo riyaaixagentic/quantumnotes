@@ -1,0 +1,454 @@
+/* Welcome Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    min-height: 100vh;
+}
+
+/* Header */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #B8C3D2 0%, #F7F7F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #B8C3D2;
+    font-weight: 300;
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: 80px;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #B8C3D2;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Setup Section */
+.setup-section {
+    margin-bottom: 80px;
+}
+
+.setup-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 40px;
+}
+
+.setup-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.setup-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.setup-step:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #B8C3D2 0%, #F7F7F8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    color: #B8C3D2;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.setup-btn {
+    background: rgba(184, 195, 210, 0.1);
+    border: 1px solid rgba(184, 195, 210, 0.2);
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: #B8C3D2;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setup-btn:hover {
+    background: rgba(184, 195, 210, 0.2);
+    border-color: rgba(184, 195, 210, 0.3);
+    color: #F7F7F8;
+}
+
+/* Commands Section */
+.commands-section {
+    margin-bottom: 80px;
+}
+
+.commands-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 40px;
+}
+
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.command-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.command-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.command-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 8px;
+}
+
+.command-card p {
+    color: #B8C3D2;
+    font-size: 14px;
+}
+
+/* Shortcuts Section */
+.shortcuts-section {
+    margin-bottom: 80px;
+}
+
+.shortcuts-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 40px;
+}
+
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.shortcut-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+kbd {
+    background: rgba(184, 195, 210, 0.1);
+    border: 1px solid rgba(184, 195, 210, 0.2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #B8C3D2;
+    font-weight: 500;
+}
+
+.shortcut-item span {
+    color: #F7F7F8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Get Started Section */
+.get-started-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.get-started-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #F7F7F8;
+    margin-bottom: 16px;
+}
+
+.get-started-section p {
+    color: #B8C3D2;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, #B8C3D2 0%, #F7F7F8 100%);
+    color: #000000;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(184, 195, 210, 0.4);
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #B8C3D2;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #F7F7F8;
+}
+
+/* Footer */
+.welcome-footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.welcome-footer p {
+    color: #B8C3D2;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #B8C3D2;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F7F7F8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 20px 16px;
+    }
+    
+    .logo h1 {
+        font-size: 36px;
+    }
+    
+    .tagline {
+        font-size: 18px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .setup-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .commands-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .shortcuts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-header {
+        margin-bottom: 40px;
+        padding: 20px 0;
+    }
+    
+    .logo h1 {
+        font-size: 28px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+    }
+    
+    .features-section h2,
+    .setup-section h2,
+    .commands-section h2,
+    .shortcuts-section h2,
+    .get-started-section h2 {
+        font-size: 28px;
+    }
+    
+    .feature-card,
+    .setup-step,
+    .command-card,
+    .shortcut-item {
+        padding: 20px;
+    }
+    
+    .get-started-section {
+        padding: 40px 20px;
+    }
+} 

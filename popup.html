@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumNotes</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L20 12L30 16L20 20L16 30L12 20L2 16L12 12L16 2Z" fill="url(#gradient)"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B8C3D2"/>
+                            <stop offset="1" stop-color="#F7F7F8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">QuantumNotes (RIYAAI.COM)</span>
+            </div>
+            <button class="settings-btn" id="settingsBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 13.3333C11.8409 13.3333 13.3333 11.8409 13.3333 10C13.3333 8.15905 11.8409 6.66667 10 6.66667C8.15905 6.66667 6.66667 8.15905 6.66667 10C6.66667 11.8409 8.15905 13.3333 10 13.3333Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M17.5 10C17.5 9.5 17.4 9 17.2 8.5L19.5 6.2C19.7 6 19.7 5.7 19.5 5.5L18.5 4.5C18.3 4.3 18 4.3 17.8 4.5L15.5 6.8C15 6.6 14.5 6.5 14 6.5V3C14 2.7 13.8 2.5 13.5 2.5H12.5C12.2 2.5 12 2.7 12 3V6.5C11.5 6.6 11 6.8 10.5 7L8.2 4.7C8 4.5 7.7 4.5 7.5 4.7L6.5 5.7C6.3 5.9 6.3 6.2 6.5 6.4L8.8 8.7C8.6 9.2 8.5 9.7 8.5 10.2C8.5 10.7 8.6 11.2 8.8 11.7L6.5 14C6.3 14.2 6.3 14.5 6.5 14.7L7.5 15.7C7.7 15.9 8 15.9 8.2 15.7L10.5 13.4C11 13.6 11.5 13.7 12 13.7V17.2C12 17.5 12.2 17.7 12.5 17.7H13.5C13.8 17.7 14 17.5 14 17.2V13.7C14.5 13.6 15 13.4 15.5 13.2L17.8 15.5C18 15.7 18.3 15.7 18.5 15.5L19.5 14.5C19.7 14.3 19.7 14 19.5 13.8L17.2 11.5C17.4 11 17.5 10.5 17.5 10Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="action-btn primary" id="newNoteBtn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2V14M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                New Note
+            </button>
+            <button class="action-btn secondary" id="voiceNoteBtn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 1V3M12 5V7M8 11V13M4 7V5M6 8C6 9.10457 6.89543 10 8 10C9.10457 10 10 9.10457 10 8V4C10 2.89543 9.10457 2 8 2C6.89543 2 6 2.89543 6 4V8Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                Voice Note
+            </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M11.5 11.5L14 14M7 12C9.76142 12 12 9.76142 12 7C12 4.23858 9.76142 2 7 2C4.23858 2 2 4.23858 2 7C2 9.76142 4.23858 12 7 12Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search your notes with AI...">
+                <button class="voice-search-btn" id="voiceSearchBtn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 1V3M10 4V6M7 8V10M4 6V4M5.5 7C5.5 7.82843 6.17157 8.5 7 8.5C7.82843 8.5 8.5 7.82843 8.5 7V3.5C8.5 2.67157 7.82843 2 7 2C6.17157 2 5.5 2.67157 5.5 3.5V7Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Notes -->
+        <div class="recent-notes">
+            <h3>Recent Notes</h3>
+            <div class="notes-list" id="recentNotesList">
+                <!-- Notes will be populated here -->
+            </div>
+        </div>
+
+        <!-- AI Features -->
+        <div class="ai-features">
+            <h3>AI Features</h3>
+            <div class="feature-grid">
+                <button class="feature-btn" id="summarizeBtn">
+                    <div class="feature-icon">📝</div>
+                    <span>Summarize</span>
+                </button>
+                <button class="feature-btn" id="organizeBtn">
+                    <div class="feature-icon">🗂️</div>
+                    <span>Organize</span>
+                </button>
+                <button class="feature-btn" id="translateBtn">
+                    <div class="feature-icon">🌐</div>
+                    <span>Translate</span>
+                </button>
+                <button class="feature-btn" id="expandBtn">
+                    <div class="feature-icon">✨</div>
+                    <span>Expand</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Voice Status -->
+        <div class="voice-status" id="voiceStatus" style="display: none;">
+            <div class="voice-indicator">
+                <div class="pulse"></div>
+                <span>Listening...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-btn" id="closeSettingsBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group" style="margin-bottom: 8px;">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #B8C3D2;">
+                        <input type="radio" checked disabled style="accent-color: #B8C3D2; margin: 0;" />
+                        Default model: <span style="font-weight: 600; color: #F7F7F8;">R.I.Y.A-AIx-Extended-2.0.4-b</span>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label>OpenAI API Key</label>
+                    <input type="password" id="openaiKey" placeholder="sk-...">
+                </div>
+                <div class="setting-group">
+                    <label>Anthropic API Key</label>
+                    <input type="password" id="anthropicKey" placeholder="sk-ant-...">
+                </div>
+                <div class="setting-group">
+                    <label>Default AI Model</label>
+                    <select id="defaultModel">
+                        <option value="gpt-4o">GPT-4o</option>
+                        <option value="gpt-4o-mini">GPT-4o Mini</option>
+                        <option value="claude-3-5-sonnet">Claude 3.5 Sonnet</option>
+                        <option value="claude-3-5-haiku">Claude 3.5 Haiku</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Voice Recognition Language</label>
+                    <select id="voiceLanguage">
+                        <option value="en-US">English (US)</option>
+                        <option value="en-GB">English (UK)</option>
+                        <option value="es-ES">Spanish</option>
+                        <option value="fr-FR">French</option>
+                        <option value="de-DE">German</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn secondary" id="cancelSettingsBtn">Cancel</button>
+                <button class="btn primary" id="saveSettingsBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="extension-footer">
+      <div class="footer-content">
+        <span style="font-size:11px;opacity:0.8;">OpenSource Foundation Software by Vishal Coodye</span>
+        <span style="font-size:11px;opacity:0.8;">| <a href="https://www.paypal.com/ncp/payment/Q963ZZW8EXEPC" target="_blank" style="color:#B8C3D2;text-decoration:underline;">DONATE</a></span>
+        <span style="font-size:11px;opacity:0.8;">| <a href="https://riyaai.com/agenticprotocol/" target="_blank" style="color:#B8C3D2;text-decoration:underline;">WEBSITE</a></span>
+        <span style="font-size:10px;opacity:0.7;display:block;">Republic of Mauritius</span>
+      </div>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html> 

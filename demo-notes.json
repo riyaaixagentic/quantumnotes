@@ -1,0 +1,31 @@
+{
+  "notes": [
+    {
+      "id": "demo-1",
+      "title": "Welcome to QuantumNotes",
+      "content": "<h1>Welcome to QuantumNotes! 🎉</h1><p>This is your first note in QuantumNotes. Here are some things you can try:</p><ul><li><strong>Voice Commands:</strong> Click the voice button and say \"new note\" or \"search notes\"</li><li><strong>AI Features:</strong> Select this text and right-click to try AI summarization</li><li><strong>Rich Editing:</strong> Use the toolbar to format your text</li><li><strong>Auto-Save:</strong> Your notes are automatically saved as you type</li></ul><h2>Getting Started</h2><p>1. Create a new note using the \"New Note\" button<br>2. Try voice input for hands-free note taking<br>3. Use AI features to enhance your content<br>4. Search through your notes with natural language</p><p><em>Happy note-taking!</em></p>",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "tags": ["welcome", "getting-started"],
+      "aiGenerated": false
+    },
+    {
+      "id": "demo-2",
+      "title": "Voice Commands Guide",
+      "content": "<h1>Voice Commands Reference</h1><p>Here are the voice commands you can use with QuantumNotes:</p><h2>Basic Commands</h2><ul><li><strong>\"New note\"</strong> - Create a new note</li><li><strong>\"Save this\"</strong> - Save selected text as a note</li><li><strong>\"Search [query]\"</strong> - Search your notes</li></ul><h2>AI Commands</h2><ul><li><strong>\"Summarize\"</strong> - AI-summarize selected text</li><li><strong>\"Organize\"</strong> - AI-organize selected content</li><li><strong>\"Translate\"</strong> - Translate selected text</li><li><strong>\"Expand\"</strong> - Expand and improve writing</li></ul><h2>Tips</h2><p>• Speak clearly and at a normal pace<br>• Use natural language - the AI understands context<br>• You can combine commands like \"new note about meeting tomorrow\"</p>",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "tags": ["voice", "commands", "guide"],
+      "aiGenerated": false
+    },
+    {
+      "id": "demo-3",
+      "title": "AI Features Overview",
+      "content": "<h1>AI-Powered Features</h1><p>QuantumNotes integrates with advanced AI models to enhance your note-taking experience:</p><h2>Available AI Models</h2><ul><li><strong>OpenAI GPT-4o:</strong> Most advanced model for complex tasks</li><li><strong>OpenAI GPT-4o Mini:</strong> Faster, more cost-effective option</li><li><strong>Anthropic Claude 3.5 Sonnet:</strong> Excellent for analysis and writing</li><li><strong>Anthropic Claude 3.5 Haiku:</strong> Fast and efficient for simple tasks</li></ul><h2>AI Actions</h2><p><strong>Summarize:</strong> Condense long text into key points<br><strong>Organize:</strong> Structure and categorize information<br><strong>Translate:</strong> Convert text to different languages<br><strong>Expand:</strong> Add detail and context to brief notes<br><strong>Improve:</strong> Enhance writing quality and clarity</p><h2>Usage Tips</h2><p>• Select text before using AI features<br>• Different models work better for different tasks<br>• AI responses are saved as new notes for easy reference</p>",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "tags": ["ai", "features", "models"],
+      "aiGenerated": false
+    }
+  ]
+} 

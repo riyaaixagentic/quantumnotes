@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumNotes (RIYAAI.COM) Editor</title>
+    <link rel="stylesheet" href="note-editor.css">
+</head>
+<body>
+    <div class="editor-container">
+        <!-- Header -->
+        <header class="editor-header">
+            <div class="header-left">
+                <button class="back-btn" id="backBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 10H5M5 10L10 15M5 10L10 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="note-info">
+                    <input type="text" id="noteTitle" placeholder="Note title..." class="title-input">
+                    <div class="note-meta">
+                        <span id="noteDate"></span>
+                        <span id="noteTags"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="ai-btn" id="aiBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 2L12 8L18 8L13 12L15 18L10 14L5 18L7 12L2 8L8 8L10 2Z" fill="currentColor"/>
+                    </svg>
+                    AI Assist
+                </button>
+                <button class="save-btn" id="saveBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17 3H3V17H17V3Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M7 7H13V11H7V7Z" fill="currentColor"/>
+                    </svg>
+                    Save
+                </button>
+            </div>
+        </header>
+
+        <!-- Editor Content -->
+        <div class="editor-content">
+            <div class="editor-main">
+                <div class="toolbar">
+                    <button class="tool-btn" data-command="bold" title="Bold (Ctrl+B)">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 2H8.5C10.433 2 12 3.567 12 5.5C12 7.433 10.433 9 8.5 9H4V2Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M4 9H9.5C11.433 9 13 10.567 13 12.5C13 14.433 11.433 16 9.5 16H4V9Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <button class="tool-btn" data-command="italic" title="Italic (Ctrl+I)">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 2H12M8 2V14H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="tool-btn" data-command="underline" title="Underline (Ctrl+U)">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 2V8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8V2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 14H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="toolbar-separator"></div>
+                    <button class="tool-btn" data-command="insertUnorderedList" title="Bullet List">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4H14M2 8H14M2 12H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="4" cy="4" r="1" fill="currentColor"/>
+                            <circle cx="4" cy="8" r="1" fill="currentColor"/>
+                            <circle cx="4" cy="12" r="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="tool-btn" data-command="insertOrderedList" title="Numbered List">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4H14M2 8H14M2 12H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <text x="3" y="6" font-size="10" fill="currentColor">1.</text>
+                            <text x="3" y="10" font-size="10" fill="currentColor">2.</text>
+                            <text x="3" y="14" font-size="10" fill="currentColor">3.</text>
+                        </svg>
+                    </button>
+                    <div class="toolbar-separator"></div>
+                    <button class="tool-btn" data-command="createLink" title="Insert Link">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 8C6 6.89543 6.89543 6 8 6H10C11.1046 6 12 6.89543 12 8C12 9.10457 11.1046 10 10 10H8C6.89543 10 6 9.10457 6 8Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M4 8H6M10 8H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="tool-btn" data-command="formatBlock" data-value="h1" title="Heading 1">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 2H8V6H2V2Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 10H14V14H2V10Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <button class="tool-btn" data-command="formatBlock" data-value="h2" title="Heading 2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 2H6V6H2V2Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 10H14V14H2V10Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="editor-area">
+                    <div id="editor" class="rich-editor" contenteditable="true" placeholder="Start writing your note..."></div>
+                </div>
+            </div>
+
+            <!-- AI Sidebar -->
+            <div class="ai-sidebar" id="aiSidebar">
+                <div class="sidebar-header">
+                    <h3>AI Assistant</h3>
+                    <button class="close-sidebar-btn" id="closeSidebarBtn">×</button>
+                </div>
+                <div class="sidebar-content">
+                    <div class="ai-actions">
+                        <button class="ai-action-btn" data-action="improve">
+                            <div class="ai-icon">✨</div>
+                            <span>Improve Writing</span>
+                        </button>
+                        <button class="ai-action-btn" data-action="summarize">
+                            <div class="ai-icon">📝</div>
+                            <span>Summarize</span>
+                        </button>
+                        <button class="ai-action-btn" data-action="expand">
+                            <div class="ai-icon">📈</div>
+                            <span>Expand Ideas</span>
+                        </button>
+                        <button class="ai-action-btn" data-action="organize">
+                            <div class="ai-icon">🗂️</div>
+                            <span>Organize</span>
+                        </button>
+                        <button class="ai-action-btn" data-action="translate">
+                            <div class="ai-icon">🌐</div>
+                            <span>Translate</span>
+                        </button>
+                        <button class="ai-action-btn" data-action="suggest">
+                            <div class="ai-icon">💡</div>
+                            <span>Suggest Topics</span>
+                        </button>
+                    </div>
+                    <div class="ai-output" id="aiOutput">
+                        <div class="ai-output-placeholder">
+                            Select an AI action to get started...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Voice Input -->
+        <div class="voice-input">
+            <button class="voice-btn" id="voiceBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 1V5M18 7V11M12 15V19M6 11V7M8 12C8 13.1046 8.89543 14 10 14C11.1046 14 12 13.1046 12 12V6C12 4.89543 11.1046 4 10 4C8.89543 4 8 4.89543 8 6V12Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                Voice Input
+            </button>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span id="wordCount">0 words</span>
+                <span id="charCount">0 characters</span>
+            </div>
+            <div class="status-right">
+                <span id="lastSaved">Not saved</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Loading Overlay -->
+    <div class="ai-loading" id="aiLoading" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>AI is thinking...</p>
+        </div>
+    </div>
+
+    <!-- Link Dialog -->
+    <div class="dialog" id="linkDialog" style="display: none;">
+        <div class="dialog-content">
+            <h3>Insert Link</h3>
+            <input type="text" id="linkUrl" placeholder="Enter URL...">
+            <input type="text" id="linkText" placeholder="Link text (optional)">
+            <div class="dialog-buttons">
+                <button class="btn secondary" id="cancelLink">Cancel</button>
+                <button class="btn primary" id="insertLink">Insert</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="extension-footer">
+      <div class="footer-content">
+        <span style="font-size:11px;opacity:0.8;">OpenSource Foundation Software by Vishal Coodye</span>
+        <span style="font-size:11px;opacity:0.8;">| <a href="https://www.paypal.com/ncp/payment/Q963ZZW8EXEPC" target="_blank" style="color:#B8C3D2;text-decoration:underline;">DONATE</a></span>
+        <span style="font-size:11px;opacity:0.8;">| <a href="https://riyaai.com/agenticprotocol/" target="_blank" style="color:#B8C3D2;text-decoration:underline;">WEBSITE</a></span>
+        <span style="font-size:10px;opacity:0.7;display:block;">Republic of Mauritius</span>
+      </div>
+    </footer>
+
+    <script src="note-editor.js"></script>
+</body>
+</html> 

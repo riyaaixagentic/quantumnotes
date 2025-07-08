@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to QuantumNotes</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Header -->
+        <header class="welcome-header">
+            <div class="logo">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 3L30 18L45 24L30 30L24 45L18 30L3 24L18 18L24 3Z" fill="url(#gradient)"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="3" y1="3" x2="45" y2="45" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B8C3D2"/>
+                            <stop offset="1" stop-color="#F7F7F8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>QuantumNotes (RIYAAI.COM)</h1>
+            </div>
+            <p class="tagline">AI-Powered Note Taking with Voice Commands</p>
+        </header>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>🚀 Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Commands</h3>
+                    <p>Create notes, search, and control the app using natural voice commands</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Assistant</h3>
+                    <p>Summarize, organize, translate, and enhance your notes with AI</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Search</h3>
+                    <p>Find your notes instantly with AI-powered semantic search</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Actions</h3>
+                    <p>Save web content, create notes from selections, and more</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Section -->
+        <section class="setup-section">
+            <h2>⚙️ Quick Setup</h2>
+            <div class="setup-steps">
+                <div class="setup-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Configure AI</h3>
+                        <p>Add your OpenAI or Anthropic API key for AI features</p>
+                        <button class="setup-btn" onclick="openSettings()">Configure AI</button>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Test Voice Commands</h3>
+                        <p>Try voice input by clicking the floating voice button on any webpage</p>
+                        <button class="setup-btn" onclick="testVoice()">Test Voice</button>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Create Your First Note</h3>
+                        <p>Start taking notes with AI assistance and voice input</p>
+                        <button class="setup-btn" onclick="createNote()">Create Note</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Commands Guide -->
+        <section class="commands-section">
+            <h2>🎤 Voice Commands</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h4>"Save this"</h4>
+                    <p>Save selected text to QuantumNotes</p>
+                </div>
+                <div class="command-card">
+                    <h4>"New note"</h4>
+                    <p>Create a new note with voice input</p>
+                </div>
+                <div class="command-card">
+                    <h4>"Search [query]"</h4>
+                    <p>Search your notes with voice</p>
+                </div>
+                <div class="command-card">
+                    <h4>"Summarize"</h4>
+                    <p>AI summarize selected text</p>
+                </div>
+                <div class="command-card">
+                    <h4>"Organize"</h4>
+                    <p>AI organize selected content</p>
+                </div>
+                <div class="command-card">
+                    <h4>"Translate"</h4>
+                    <p>AI translate selected text</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keyboard Shortcuts -->
+        <section class="shortcuts-section">
+            <h2>⌨️ Keyboard Shortcuts</h2>
+            <div class="shortcuts-grid">
+                <div class="shortcut-item">
+                    <kbd>Ctrl + Shift + V</kbd>
+                    <span>Voice Input</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Ctrl + Shift + S</kbd>
+                    <span>Save Selection</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Ctrl + N</kbd>
+                    <span>New Note</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Ctrl + F</kbd>
+                    <span>Search Notes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Started -->
+        <section class="get-started-section">
+            <h2>🎯 Ready to Get Started?</h2>
+            <p>QuantumNotes is now ready to enhance your note-taking experience with AI and voice commands.</p>
+            <div class="action-buttons">
+                <button class="primary-btn" onclick="createNote()">Create Your First Note</button>
+                <button class="secondary-btn" onclick="openSettings()">Configure Settings</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="welcome-footer">
+            <p style="font-size:11px;opacity:0.8;">OpenSource Foundation Software by Vishal Coodye</p>
+            <div class="footer-links">
+                <a href="https://www.paypal.com/ncp/payment/Q963ZZW8EXEPC" target="_blank" style="color:#B8C3D2;text-decoration:underline;font-size:11px;">DONATE</a>
+                <a href="https://riyaai.com/agenticprotocol/" target="_blank" style="color:#B8C3D2;text-decoration:underline;font-size:11px;">WEBSITE</a>
+            </div>
+            <span style="font-size:10px;opacity:0.7;display:block;">Republic of Mauritius</span>
+        </footer>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html> 
