@@ -1,6 +1,6 @@
 # QuantumNotes - AI-Powered Note Taking Chrome Extension
-
-A sophisticated Chrome extension for AI-powered note-taking with voice commands, intelligent search, and a stunning UI inspired by the IMBX design aesthetic.
+![QuantumNotes Screenshot](https://riyaai.com/quantum-notes.jpg)
+A sophisticated Chrome extension for AI-powered note-taking with voice commands, intelligent search, and a stunning UI.
 
 ## ✨ Features
 
