@@ -22,7 +22,6 @@ A sophisticated Chrome extension for AI-powered note-taking with voice commands,
   - Suggest related topics
 
 ### 🎨 Design & UX
-- **IMBX-Inspired Design**: Modern, dark theme with gradient accents
 - **Responsive Interface**: Works seamlessly across different screen sizes
 - **Smooth Animations**: Polished interactions and transitions
 - **Floating Voice Button**: Easy access to voice commands on any webpage
@@ -79,7 +78,7 @@ A sophisticated Chrome extension for AI-powered note-taking with voice commands,
 
 ## 🎨 Design Philosophy
 
-The extension features a sophisticated dark theme inspired by the IMBX affiliate website, with:
+The extension features a sophisticated dark theme, with:
 
 - **Color Palette**: 
   - Primary: `#B8C3D2` to `#F7F7F8` gradient
@@ -195,7 +194,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- **IMBX Design Team**: For the inspiring design aesthetic
 - **OpenAI**: For providing the GPT models
 - **Anthropic**: For providing the Claude models
 - **Chrome Extensions Team**: For the excellent extension platform
